@@ -1,4 +1,4 @@
-name: Node.js CI 
+name: Node.js CI
 
 on:
   push:
@@ -9,10 +9,10 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-
+  
     steps:
     - uses: actions/checkout@v2
-    - name: use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}

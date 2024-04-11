@@ -22,8 +22,6 @@ jobs:
         npm i
         npm run build
         cd ..
-        pm2 stop all //stop all
-        rm ./pm2/*.pid //delete all
         pm2 start app.config.js
         pm2 save
         sudo service nginx restart 
